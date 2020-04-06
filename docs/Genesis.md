@@ -215,3 +215,9 @@ cd ..
 # 原文
 
 [http://www.jamesmolloy.co.uk/tutorial_html/2.-Genesis.html](http://www.jamesmolloy.co.uk/tutorial_html/2.-Genesis.html)
+
+# References
+
+[http://faculty.cs.tamu.edu/bettati/Courses/OSProjects/to-use-gdb-tools.pdf](http://faculty.cs.tamu.edu/bettati/Courses/OSProjects/to-use-gdb-tools.pdf)
+
+[https://blog.csdn.net/furzoom/article/details/52484413](https://blog.csdn.net/furzoom/article/details/52484413)

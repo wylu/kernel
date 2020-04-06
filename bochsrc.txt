@@ -1,9 +1,33 @@
+# 1.设置Bochs在运行过程中能够使用的内存32MB
 megs: 32
-romimage: file=/usr/share/bochs/BIOS-bochs-latest, address=0xf0000
-vgaromimage: /usr/share/bochs/VGABIOS-elpin-2.40
-floppya: 1_44=/dev/loop0, status=inserted
-boot: a
+
+# 2.设置对应真实机器的BIOS和VGA BIOS
+romimage: file=/usr/local/share/bochs/BIOS-bochs-latest
+vgaromimage: file=/usr/local/share/bochs/VGABIOS-lgpl-latest
+
+# 3.设置Bochs所使用的磁盘，软盘的关键字为floppy
+# 若只有一个软盘，则使用floppya即可，若有多个，则为floppya，floppyb…
+floppya: 1_44=floppy.img, status=inserted
+# 如果floppy.img被虚拟成块设备如/dev/loop0，则为
+#floppya: 1_44=/dev/loop0, status=inserted
+
+# 4.设置启动方式
+boot: floppy  # 默认从软盘启动
+#boot: disk  # 从硬盘启动
+
+# 5.设置日志文件的输出
 log: bochsout.txt
+
+# 6.开启或关闭某些功能
+# 不启用鼠标
 mouse: enabled=0
+# 启用键盘（US键盘映射）
+keyboard: keymap=/usr/local/share/bochs/keymaps/x11-pc-us.map
+
+# 7.CPU配置
 clock: sync=realtime
-cpu: ips=500000
+cpu: ips=1000000
+
+# 8.启用gdb联调
+# 这样gdb便可以远程连接到此机器的1234端口调试了
+gdbstub: enabled=1,port=1234,text_base=0,data_base=0,bss_base=0

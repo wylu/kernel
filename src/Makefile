@@ -5,9 +5,9 @@
 
 SOURCES=boot.o main.o
 
-CFLAGS=-c -Wall -m32 -ggdb -gstabs+ -nostdinc -fno-pic -fno-builtin -fno-stack-protector -I include
-LDFLAGS=-T link.ld -m elf_i386 -nostdlib
-ASFLAGS=-f elf -g -F stabs
+CFLAGS=-g -m32 -nostdlib -nostdinc -fno-builtin -fno-stack-protector
+LDFLAGS=-T link.ld -m elf_i386
+ASFLAGS=-f elf
 
 all: $(SOURCES) link
 
