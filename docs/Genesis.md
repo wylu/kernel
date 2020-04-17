@@ -210,6 +210,8 @@ cd ..
 
 请注意，EAX的值是多少？`0xDEADBABA` - `main()` 的返回值。恭喜，您现在拥有一个兼容多引导的组件蹦床，并且准备开始在屏幕上打印！
 
+![genesis_bochs](img/genesis_bochs.png)
+
 可在此处找到本教程的[示例代码](http://www.jamesmolloy.co.uk/tutorial_html/genesis.tar)
 
 # 原文
@@ -219,5 +221,7 @@ cd ..
 # References
 
 [http://faculty.cs.tamu.edu/bettati/Courses/OSProjects/to-use-gdb-tools.pdf](http://faculty.cs.tamu.edu/bettati/Courses/OSProjects/to-use-gdb-tools.pdf)
+
+[http://www.ruanyifeng.com/blog/2013/02/booting.html](http://www.ruanyifeng.com/blog/2013/02/booting.html)
 
 [https://blog.csdn.net/furzoom/article/details/52484413](https://blog.csdn.net/furzoom/article/details/52484413)
